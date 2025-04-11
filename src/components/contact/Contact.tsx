@@ -1,4 +1,4 @@
-import { Ref } from 'react';
+import React from 'react';
 import Box11 from '../box/Box11';
 import Naver from '@/assets/Naver.png';
 import Gmail from '@/assets/Gmail.png';
@@ -14,16 +14,10 @@ const LINK = [
   'https://www.instagram.com/duyeon_0915',
 ];
 
-interface ProjectsProps {
-  ref?: Ref<HTMLDivElement>;
-}
-const Contact = ({ ref }: ProjectsProps) => {
+const Contact = React.memo(() => {
   return (
-    <section
-      ref={ref}
-      className="w-full max-w-9/10 flex flex-col gap-20 items-center m-auto"
-    >
-      <article className="w-9/10 m-auto pt-50 flex flex-col items-center">
+    <section className="w-full max-w-9/10 flex flex-col gap-20 items-center m-auto pb-50">
+      <article className="w-9/10 m-auto flex flex-col items-center">
         <p className="text-center text-28 font-semibold pb-30">Contact</p>
       </article>
       {/* <div className="w-full text-24 text-center py-10">It's Me!</div> */}
@@ -41,6 +35,8 @@ const Contact = ({ ref }: ProjectsProps) => {
       </div>
     </section>
   );
-};
+});
+
+Contact.displayName = 'Contact';
 
 export default Contact;

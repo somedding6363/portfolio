@@ -1,3 +1,4 @@
+import React from 'react';
 import Box11 from '../box/Box11';
 import Box12 from '../box/Box12';
 import Box22 from '../box/Box22';
@@ -11,18 +12,15 @@ import About from './About';
 import Resume from './Resume';
 import ScreenMode from './ScreenMode';
 import { useThemeStore } from '@/store/useThemeStore';
-import { Ref } from 'react';
 
-interface MainProps {
-  ref: Ref<HTMLDivElement>;
-}
-const Main = ({ ref }: MainProps) => {
+const Main = React.memo(() => {
+  console.log('main');
   const { isDark } = useThemeStore();
   return (
-    <section
-      ref={ref}
-      className="w-full max-w-9/10 pt-(--header-height) flex flex-col gap-20 items-center m-auto"
-    >
+    <section className="w-full max-w-9/10 flex flex-col gap-20 items-center m-auto pb-50">
+      <article className="w-9/10 m-auto flex flex-col items-center">
+        <p className="text-center text-28 font-semibold">It&apos;s Me</p>
+      </article>
       {/* <div className="w-full text-24 text-center py-10">It's Me!</div> */}
       <div className="grid gc:grid-cols-(--box-col-4) grid-cols-(--box-col-2) grid-flow-row auto-rows-(--box1) gap-20 transition-[grid-cols]">
         <Box12 bg="bg-main-500">
@@ -56,5 +54,8 @@ const Main = ({ ref }: MainProps) => {
       </div>
     </section>
   );
-};
+});
+
+Main.displayName = 'Main';
+
 export default Main;

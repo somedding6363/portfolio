@@ -1,16 +1,20 @@
-const MENU = ['About', 'Project', 'Contact'];
+const MENU = ['All', 'About', 'Project', 'Contact'];
 interface NavProps {
   activeId: number;
-  scrollToSection: (id: number) => void;
+  setActiveId: React.Dispatch<React.SetStateAction<number>>;
 }
-const Nav = ({ activeId, scrollToSection }: NavProps) => {
+const Nav = ({ activeId, setActiveId }: NavProps) => {
+  const handleReLayout = (id: number) => {
+    setActiveId(id);
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  };
   return (
     <nav className="h-42 p-5 rounded-full bg-light-nav dark:bg-dark-nav relative">
       <ul className="flex">
         {MENU.map((v, i) => (
           <li
             key={i}
-            onClick={() => scrollToSection(i)}
+            onClick={() => handleReLayout(i)}
             className={`w-80 rounded-full text-center text-14 text-nowrap font-medium leading-32 hover:cursor-pointer hover:text-gray-500 z-10`}
           >
             {v}

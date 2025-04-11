@@ -1,21 +1,18 @@
+import React from 'react';
 import ProjectItem from './ProjectItem';
 import kuphilWeb from '@/assets/project/kuphilWeb.png';
 import colorMe from '@/assets/project/colorMe.png';
-import { Ref } from 'react';
 
 const LIST = ['Kuphil Web', 'Color, me'];
 const THUMB = [kuphilWeb, colorMe];
 
-interface ProjectsProps {
-  ref?: Ref<HTMLDivElement>;
-}
-const Projects = ({ ref }: ProjectsProps) => {
+const Projects = React.memo(() => {
   return (
-    <section ref={ref}>
+    <section>
       {LIST.map((v, i) => (
         <article
           key={i}
-          className="w-9/10 m-auto pt-50 flex flex-col items-center"
+          className="w-9/10 m-auto flex flex-col items-center pb-50"
         >
           <p className="text-center text-18 pb-10">Project #{i + 1}</p>
           <p className="text-center text-28 font-semibold pb-30">{v}</p>
@@ -24,6 +21,8 @@ const Projects = ({ ref }: ProjectsProps) => {
       ))}
     </section>
   );
-};
+});
+
+Projects.displayName = 'Projects';
 
 export default Projects;
