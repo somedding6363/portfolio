@@ -84,7 +84,7 @@
     "tags": ["개인", "토이 프로젝트", "포팅"],
     "color": "#e0e0e0",
     "link": "https://chromewebstore.google.com/detail/ldcmnbbjcbciolddfffpfghlcgnogacp?hl=ko&utm_source=ext_sidebar",
-    "git": "https://github.com/rkddusen/ColorMe",
+    "git": "https://github.com/somedding6363/ColorMe",
     "summary": [
       "원하는 색상 조합을 저장할 수 있는 웹 서비스를 제작했습니다.",
       "GitHub Pages로 1차 배포 후, 접근성을 고려해 크롬 익스텐션으로 버전 2를 배포했습니다.",

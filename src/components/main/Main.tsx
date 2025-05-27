@@ -37,7 +37,7 @@ const Main = React.memo(() => {
           </Other>
         </Box11>
         <Box11>
-          <Other title="GitHub" link="https://github.com/rkddusen">
+          <Other title="GitHub" link="https://github.com/somedding6363">
             <img
               className="w-2/5"
               src={isDark ? GithubWhiteLogo : GitHubLogo}
