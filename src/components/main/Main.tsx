@@ -4,7 +4,7 @@ import Box12 from '../box/Box12';
 import Box22 from '../box/Box22';
 import Modifier from './Modifier';
 import Other from './Other';
-import TistoryLogo from '@/assets/Tistory.png';
+import VelogLogo from '@/assets/Velog.jpg';
 import GitHubLogo from '@/assets/Github.png';
 import GithubWhiteLogo from '@/assets/GithubWhite.png';
 import Profile from '@/assets/Profile.png';
@@ -14,7 +14,6 @@ import ScreenMode from './ScreenMode';
 import { useThemeStore } from '@/store/useThemeStore';
 
 const Main = React.memo(() => {
-  console.log('main');
   const { isDark } = useThemeStore();
   return (
     <section className="w-full max-w-9/10 flex flex-col gap-20 items-center m-auto pb-50">
@@ -32,8 +31,8 @@ const Main = React.memo(() => {
           </About>
         </Box22>
         <Box11>
-          <Other title="개발 블로그" link="https://duyaan.tistory.com/">
-            <img className="w-2/5" src={TistoryLogo} alt="Tistory" />
+          <Other title="개발 블로그" link="https://velog.io/@somedding/posts">
+            <img className="w-2/5 rounded-5" src={VelogLogo} alt="Tistory" />
           </Other>
         </Box11>
         <Box11>
