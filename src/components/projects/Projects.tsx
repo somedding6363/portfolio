@@ -1,10 +1,11 @@
 import React from 'react';
 import ProjectItem from './ProjectItem';
+import soool from '@/assets/project/soool.png';
 import kuphilWeb from '@/assets/project/kuphilWeb.png';
 import colorMe from '@/assets/project/colorMe.png';
 
-const LIST = ['Kuphil Web', 'Color, me'];
-const THUMB = [kuphilWeb, colorMe];
+const LIST = ['Soool', 'Kuphil Web', 'Color, me'];
+const THUMB = [soool, kuphilWeb, colorMe];
 
 const Projects = React.memo(() => {
   return (

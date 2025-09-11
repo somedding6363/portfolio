@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import BoxProject from '../box/BoxProject';
 import KuphilWeb from './troubleshooting/KuphilWeb';
 import ColorMe from './troubleshooting/ColorMe';
+import Soool from './troubleshooting/Soool';
 
 const LIST = [
   ['프로젝트 소개', 'introduce'],
@@ -60,7 +61,7 @@ const ProjectDetail = ({
   if (!isOpen) return null;
   return (
     <div className="fixed z-10 top-0 animate-open-detail left-0 w-full h-dvh bg-light-header dark:bg-dark-header backdrop-blur-xs overflow-hidden">
-      <div className="flex flex-col justify-center items-center w-9/10 max-w-[1200px] h-[calc(100%-30px)] mt-30 mx-auto p-20 bg-light-box dark:bg-dark-box rounded-t-20">
+      <div className="flex flex-col justify-center items-center w-9/10 max-w-[1200px] h-[calc(100%-30px)] mt-30 mx-auto p-40 bg-light-box dark:bg-dark-box rounded-t-20">
         <div
           onClick={() => setIsOpen(false)}
           className="w-45 h-45 shrink-0 mx-auto flex justify-center items-center text-32 border-2 border-main-500 rounded-full hover:cursor-pointer hover:bg-light-box-hover dark:hover:bg-dark-box-hover"
@@ -149,12 +150,18 @@ const ProjectDetail = ({
               />
             ))}
             {id === 0 && (
-              <KuphilWeb
+              <Soool
                 openedContent={openedContent[LIST.length]}
                 handleOpen={() => handleOpen(LIST.length)}
               />
             )}
             {id === 1 && (
+              <KuphilWeb
+                openedContent={openedContent[LIST.length]}
+                handleOpen={() => handleOpen(LIST.length)}
+              />
+            )}
+            {id === 2 && (
               <ColorMe
                 openedContent={openedContent[LIST.length]}
                 handleOpen={() => handleOpen(LIST.length)}

@@ -9,6 +9,7 @@ import ProjectTag from './contents/ProjectTag';
 import ProjectImage from './contents/ProjectImage';
 import { useState } from 'react';
 import ProjectDetail from './ProjectDetail';
+import sooolImage from '@/assets/project/soool/soool1.png';
 import kuphilWebImage from '@/assets/project/kuphilWeb/kuphilWeb1.png';
 import colorMeImage from '@/assets/project/colorMe/colorMe1.png';
 
@@ -19,7 +20,7 @@ interface ProjectProps {
 const ProjectItem = ({ id, img }: ProjectProps) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const { date, link, git, tags, summary }: Project = projectData[id];
-  const IMAGES = [kuphilWebImage, colorMeImage];
+  const IMAGES = [sooolImage, kuphilWebImage, colorMeImage];
   return (
     <>
       <div className="grid gc:grid-cols-(--box-col-4) grid-cols-(--box-col-2) grid-flow-row auto-rows-(--box1) gap-20 transition-[grid-cols]">

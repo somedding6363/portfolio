@@ -28,7 +28,7 @@ const KuphilWeb = ({ openedContent, handleOpen }: KuphilWebProps) => {
             <path d="M6 9l6 6 6-6" />
           )}
         </svg>
-        <p>문제 해결</p>
+        <p>트러블 슈팅</p>
       </div>
       <div
         className={`${openedContent && 'px-15 py-10 bg-main-300 rounded-b-10'}`}
