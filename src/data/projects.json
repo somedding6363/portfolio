@@ -67,7 +67,7 @@
   },
   {
     "title": "Kuphil Web",
-    "date": ["2021.12", "~", "2024.05"],
+    "date": ["2022.01", "~", "2024.04"],
     "tags": ["4인 팀", "사이드 프로젝트", "반응형", "리뉴얼"],
     "color": "#FBE7D4",
     "link": "https://www.kuphil.com",
@@ -147,7 +147,7 @@
   {
     "title": "Color, me",
     "date": ["2023.11"],
-    "tags": ["개인", "토이 프로젝트", "포팅"],
+    "tags": ["개인", "토이 프로젝트", "크롬 익스텐션"],
     "color": "#e0e0e0",
     "link": "https://chromewebstore.google.com/detail/ldcmnbbjcbciolddfffpfghlcgnogacp?hl=ko&utm_source=ext_sidebar",
     "git": "https://github.com/somedding6363/ColorMe",
